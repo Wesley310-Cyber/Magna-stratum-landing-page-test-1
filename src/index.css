@@ -1,0 +1,37 @@
+@import "tailwindcss";
+
+@theme {
+  --color-oxford: #002147;
+  --color-brass: #b5a642;
+  --color-brass-dark: #8e8234;
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+  --font-serif: "Playfair Display", ui-serif, Georgia, serif;
+  --radius-custom: 8px;
+}
+
+body {
+  background-color: var(--color-oxford);
+  color: #f8fafc;
+  font-family: var(--font-sans);
+}
+
+h1, h2, h3, h4, .font-serif {
+  font-family: var(--font-serif);
+}
+
+.glass-card {
+  background: rgba(255, 255, 255, 0.03);
+  backdrop-filter: blur(8px);
+  border: 1px solid rgba(181, 166, 66, 0.2);
+}
+
+.process-line::before {
+  content: '';
+  position: absolute;
+  top: 2rem;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background: linear-gradient(90deg, transparent, var(--color-brass), transparent);
+  z-index: 0;
+}
